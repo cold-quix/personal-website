@@ -1,3 +1,19 @@
 /*
 CSS used on projects page.
 */
+
+/* Placeholder CSS */
+.placeholder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-size: 14pt;
+	width: 100%;
+}
+
+/* CSS for blog content wrapper */
+.projects_wrap {
+	
+}
+

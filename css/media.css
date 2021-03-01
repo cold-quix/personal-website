@@ -42,7 +42,7 @@ CSS used on media page.
 /* CSS for video grid */
 .grid_videos {
 	display: grid;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(5, auto);
 	grid-column-gap: 5px;
 	grid-row-gap: 5px;
@@ -80,13 +80,87 @@ CSS used on media page.
 	padding: 5px;
 }
 
+/* CSS for articles grid */
+.grid_articles {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(9, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
 
+/* CSS for panel positions */
+.articles_one {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
 
+.articles_two {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
 
+.articles_three {
+	grid-area: 6 / 2 / span 1 / span 1;
+}
 
+.articles_four {
+	grid-area: 8 / 2 / span 1 / span 1;
+}
 
+/* CSS for panel contents */
+.articles_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16pt;
+}
 
+.articles_desc {
+	font-size: 14pt;
+}
 
+/* CSS for other stuff grid */
+.grid_other {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(5, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
+
+/* CSS for panel positions */
+.other_one {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.other_two {
+	grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.other_three {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.other_four {
+	grid-area: 4 / 4 / span 1 / span 1;
+}
+
+/* CSS for panel contents */
+.other_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14pt;
+	padding: 5px;
+}
+
+.other_desc {
+	font-size: 14pt;
+	padding: 5px;
+}
 
 
 

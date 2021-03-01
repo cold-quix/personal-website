@@ -26,23 +26,23 @@ function showSelection(ID) {
 		// wanted to see
 		if (ID == "ID-videos") {
 			// Show videos, hide rest
-			document.getElementById("ID-list_articles").hidden = true;
-			document.getElementById("ID-list_other").hidden = true;
-			document.getElementById("ID-list_videos").hidden = false;
+			document.getElementById("ID-list_articles").style.display = "none";
+			document.getElementById("ID-list_other").style.display = "none";
+			document.getElementById("ID-list_videos").style.display = "block";
 			currentShow = ID;
 		}
 		else if (ID == "ID-articles") {
 			// Show articles, hide rest
-			document.getElementById("ID-list_articles").hidden = false;
-			document.getElementById("ID-list_other").hidden = true;
-			document.getElementById("ID-list_videos").hidden = true;
+			document.getElementById("ID-list_articles").style.display = "block";
+			document.getElementById("ID-list_other").style.display = "none";
+			document.getElementById("ID-list_videos").style.display = "none";
 			currentShow = ID;
 		}
 		else if (ID == "ID-other") {
 			// Show other, hide rest
-			document.getElementById("ID-list_articles").hidden = true;
-			document.getElementById("ID-list_other").hidden = false;
-			document.getElementById("ID-list_videos").hidden = true;
+			document.getElementById("ID-list_articles").style.display = "none";
+			document.getElementById("ID-list_other").style.display = "block";
+			document.getElementById("ID-list_videos").style.display = "none";
 			currentShow = ID;
 		}
 	}

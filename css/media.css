@@ -1,0 +1,92 @@
+/*
+CSS used on media page.
+*/
+
+
+.select_wrap {
+	
+}
+
+/* CSS for selection tab grid */
+.grid_select {
+	display: grid;
+	background-color: rgba(60, 100, 190, 0.9);
+	color: white;
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(3, 2fr);
+}
+
+/* CSS for panel positions */
+.select_one {
+	grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.select_two {
+	grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.select_three {
+	grid-area: 1 / 3 / span 1 / span 1;
+}
+
+/* CSS for panel contents */
+.select_contents {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18pt;
+	height: 3rem;
+	border: solid white 2px;
+}
+
+/* CSS for video grid */
+.grid_videos {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(5, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
+
+/* CSS for panel positions */
+.videos_one {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.videos_two {
+	grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.videos_three {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.videos_four {
+	grid-area: 4 / 4 / span 1 / span 1;
+}
+
+/* CSS for panel contents */
+.videos_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid black 2px;
+}
+
+.videos_desc {
+	font-size: 14pt;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

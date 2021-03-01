@@ -1,0 +1,46 @@
+/*
+CSS used on contact page.
+*/
+
+
+
+
+/* CSS for grid */
+.contact_grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
+
+/* CSS for grid panel positions */
+.name_one {
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+.name_two {
+	grid-area: 4 / 2 / 5 / 3;
+}
+
+.link_one {
+	grid-area: 2 / 4 / 3 / 5;
+}
+
+.link_two {
+	grid-area: 4 / 4 / 5 / 5;
+	
+}
+
+/* CSS for grid content */
+.grid_content {
+	font-size: 14pt;
+	
+}
+
+
+
+
+

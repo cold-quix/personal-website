@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+    FILE			: media.html
+    PROJECT			: Jack Parkinson's personal website
+    PROGRAMMER		: Jack Parkinson
+    FIRST VERSION	: 2021-02-23
+    DESCRIPTION		:
+        The media page of my personal website.  Contains links to videos 
+		and other things I've created.
+-->
+
+<html>
+	<head>
+		<title>Jack Parkinson - Media</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/media.css">
+           
+	</head>
+	
+	<body>
+		<!-- Page wrapper to help anchor footer -->
+		<div name="page_wrapper" id="ID-page_wrapper" class="page_wrap">
+			<!-- Intro -->
+			<div name="intro_wrapper" id="ID-intro_wrapper" class="intro_wrap">
+				<div name="intro_name" id="ID-intro_name" class="intro_title">
+					Media
+				</div>
+				
+				<div name="intro_text" id="ID-intro_text" class="intro_desc">
+				<p class="intro_desc">Videos, articles, and other things I've created 
+				that aren't computer programming.</p>
+				</div>
+			</div>
+			
+			
+			<!-- Selection tabs -->
+			<div name="selection_wrapper" id="ID-selection_wrapper" class="select_wrap">
+				<div name="selection_grid" id="ID-selection_grid" class="grid_select">
+					<div class="select_one select_contents" name="videos" id="ID-videos" onclick="showSelection(this.id)">Videos</div>
+					<div class="select_two select_contents" name="articles" id="ID-articles" onclick="showSelection(this.id)">Articles</div>
+					<div class="select_three select_contents" name="other" id="ID-other" onclick="showSelection(this.id)">Other Things</div>
+				</div>
+			</div>
+			
+			<!-- Media item wrapper -->
+			<div name="list_wrapper" id="ID-list_wrapper">
+				<!-- Media items -->
+				<div name="list_videos" id="ID-list_videos"> <!-- Videos are shown by default -->
+					<div name="videos_wrapper" id="ID-videos_wrapper">
+						<div name="videos_grid" id="ID-videos_grid" class="grid_videos">
+							<div class="videos_one videos_content"><iframe src="https://www.youtube.com/embed/m7EnCio9O6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+							<div class="videos_two videos_content videos_desc">A video I created as an introduction to the video game Guilty Gear Xrd.  GGXrd is a fighting game with 25 unique playable characters, so new players can often feel overwhelmed when trying to decide which character to focus on.  It has achieved almost 100,000 views, which I am very happy with since I had zero traction when I first published it.</div>
+							
+							<div class="videos_three videos_content"><iframe src="https://www.youtube.com/embed/wjOh1vXUjJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+							<div class="videos_four videos_content videos_desc">A video describing the history of changes and balance patches for the character Raven in Guilty Gear Xrd.  I play Raven and like him a lot, but when he was first added to the game he was very one-dimensional and far too strong for competitive balance.</div>
+						</div>
+					<div>
+				</div>
+				
+				<div name="list_articles" id="ID-list_articles" hidden>
+					list of articles goes here
+				</div>
+				
+				<div name="list_other" id="ID-list_other" hidden>
+					list of other things goes here
+				</div>
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<!-- Footer -->
+			<footer>
+				<a href="../home.html" class="footer_link">Home</a>
+				--
+				<a href="./projects.html" class="footer_link">Projects</a>
+				--
+				<a href="./media.html" class="footer_link">Media</a>
+				--
+				<a href="./contact.html" class="footer_link">Contact</a>
+				--
+				<a href="./blog.html" class="footer_link">Blog</a>
+			</footer>
+		</div>
+		
+		
+		<!-- Scripts -->
+		<script src="../js/media.js"></script>
+	</body>
+	
+	
+	
+	
+	
+</html>
+
+		
+
+

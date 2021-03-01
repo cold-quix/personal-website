@@ -1,0 +1,61 @@
+/*
+ * CSS for Jack Parkinson's website.
+ * This file contains CSS for elements common across all pages.
+ */
+
+/* Body and footer elements are common */
+body {
+	background-color: rgba(255, 175, 90, 1);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 3rem;
+	color: white;
+	background-color: rgb(50, 50, 50);
+	font-size: 24px;
+}
+
+/* Intentionally blank CSS for flexible grid panels */
+.grid_gap {
+	
+}
+
+/* Page wrapper */
+.page_wrap {
+	position: relative;
+	min-height: 100vh;
+	margin: 1rem;
+}
+
+/* Wrapper for introductions at page tops */
+.intro_wrap {
+	align: center;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+
+/* CSS for introduction contents */
+.intro_title {
+	font-size: 72pt;
+	text-align: center;
+}
+
+.intro_desc {
+	font-size: 16pt;
+	text-align: justify;
+	
+}
+
+/* CSS for footer links */
+.footer_link {
+	color: rgb(100, 250, 45);
+}
+

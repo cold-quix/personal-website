@@ -26,36 +26,28 @@ CSS used on homepage.
 }
 /* Locations for grid elements */
 .one {
-	grid-row: 2;
-	grid-column: 2;
+	grid-area: 2 / 2 / span 1 / span 1;
 }
 .two {
-	grid-row: 2;
-	grid-column: 4;
+	grid-area: 2 / 4 / span 1 / span 1;
 }
 .three {
-	grid-row: 2;
-	grid-column: 6;
+	grid-area: 2 / 6 / span 1 / span 1;
 }
 .four {
-	grid-row: 2;
-	grid-column: 8;
+	grid-area: 2 / 8 / span 1 / span 1;
 }
 .five {
-	grid-row: 4;
-	grid-column: 2;
+	grid-area: 4 / 2 / span 1 / span 1;
 }
 .six {
-	grid-row: 4;
-	grid-column: 4;
+	grid-area: 4 / 4 / span 1 / span 1;
 }
 .seven {
-	grid-row: 4;
-	grid-column: 6;
+	grid-area: 4 / 6 / span 1 / span 1;
 }
 .eight {
-	grid-row: 4;
-	grid-column: 8;
+	grid-area: 4 / 8 / span 1 / span 1;
 }
 
 /* CSS for grid content */

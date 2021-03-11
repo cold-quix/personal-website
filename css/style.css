@@ -59,3 +59,37 @@ footer {
 	color: rgb(100, 250, 45);
 }
 
+/* CSS for footer grid */
+.footer_grid {
+	display: grid;
+	grid-template-columns: repeat(11, auto);
+	grid-template-rows: repeat(3, auto);
+	grid-column-gap: 1rem;
+	grid-column-gap: 1rem;
+}
+
+.footer_grid_content {
+	
+}
+
+.footer_grid_one {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.footer_grid_two {
+	grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.footer_grid_three {
+	grid-area: 2 / 6 / span 1 / span 1;
+}
+
+.footer_grid_four {
+	grid-area: 2 / 8 / span 1 / span 1;
+}
+
+.footer_grid_five {
+	grid-area: 2 / 10 / span 1 / span 1;
+}
+
+

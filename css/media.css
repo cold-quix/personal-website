@@ -11,6 +11,18 @@ CSS used on media page.
 	grid-template-columns: repeat(3, 2fr);
 }
 
+/* CSS for highlighted selection tabs */
+.select_highlight {
+	background-color: rgba(220, 50, 60, 1.0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18pt;
+	text-decoration: underline;
+	height: 3rem;
+	border: solid white 2px;
+}
+
 /* CSS for panel positions */
 .select_one {
 	grid-area: 1 / 1 / span 1 / span 1;

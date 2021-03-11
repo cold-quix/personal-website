@@ -48,6 +48,16 @@ function showSelection(ID) {
 	}
 }
 
+// Function which highlights tabs when user mouses over them
+function highlightTab(ID) {
+	document.getElementById(ID).setAttribute("class", "select_highlight");
+}
+
+
+// Function which un-highlights tabs when user mouses out from them
+function unHighlightTab(ID) {
+	document.getElementById(ID).setAttribute("class", "select_contents");
+}
 
 
 

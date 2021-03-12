@@ -2,18 +2,53 @@
 CSS used on projects page.
 */
 
-/* Placeholder CSS */
-.placeholder {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: white;
-	font-size: 14pt;
+/* CSS for project content wrapper */
+.projects_wrap {
 	width: 100%;
 }
 
-/* CSS for blog content wrapper */
-.projects_wrap {
-	
+/* CSS for projects grid */
+.projects_grid {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(4, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
 }
 
+/* CSS for projects grid panel positions */
+.projects_one {
+	grid-area: 2 / 2 / span 2 / span 1;
+}
+
+.projects_two {
+	grid-area: 2 / 4 / span 2 / span 1;
+}
+
+/* CSS for projects grid contents */
+.project_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid black 2px;
+	font-size: 14pt;
+	font-family: arial;
+	padding: 10px;
+	max-width: 15rem;
+}
+
+.project_desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	border-right: solid black 2px;
+	font-size: 12pt;
+	font-family: arial;
+	padding: 10px;
+	max-width: 15rem;
+	min-height: 10rem;
+}

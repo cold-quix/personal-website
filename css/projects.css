@@ -37,8 +37,12 @@ CSS used on projects page.
 	font-family: arial;
 	padding: 10px;
 	max-width: 15rem;
+	background-color: rgba(60, 100, 190, 0.9);
 }
 
+.project_title_link {
+	color: white;
+}
 .project_desc {
 	display: flex;
 	justify-content: center;

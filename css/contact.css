@@ -8,36 +8,52 @@ CSS used on contact page.
 /* CSS for grid */
 .contact_grid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(7, auto);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 	background-color: white;
-	padding: 15px;
 }
 
 /* CSS for grid panel positions */
-.name_one {
-	grid-area: 2 / 2 / 3 / 3;
+.contact_one {
+	grid-area: 2 / 2 / span 1 / span 1;
 }
 
-.name_two {
-	grid-area: 4 / 2 / 5 / 3;
+.contact_two {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.contact_three {
+	grid-area: 6 / 2 / span 1 / span 1;
 }
 
 .link_one {
-	grid-area: 2 / 4 / 3 / 5;
+	grid-area: 2 / 3 / span 1 / span 1;
 }
 
 .link_two {
-	grid-area: 4 / 4 / 5 / 5;
-	
+	grid-area: 4 / 3 / span 1 / span 1;
+}
+
+.link_three {
+	grid-area: 6 / 3 / span 1 / span 1;
 }
 
 /* CSS for grid content */
 .grid_content {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	font-size: 14pt;
-	
+	padding: 10px;
+}
+
+.grid_desc {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 14pt;
 }
 
 

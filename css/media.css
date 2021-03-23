@@ -49,29 +49,82 @@ CSS used on media page.
 /* CSS for video grid */
 .grid_videos {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(5, auto);
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(13, auto);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
 	background-color: white;
 	padding: 15px;
 }
 
 /* CSS for panel positions */
-.videos_one {
-	grid-area: 2 / 2 / span 1 / span 1;
-}
 
+/* Video 1 */
+.videos_one {
+	grid-area: 2 / 2 / span 2 / span 1;
+}
+/* Video 1 description anchor */
 .videos_two {
+	grid-area: 2 / 4 / span 2 / span 1;
+}
+/* Video 1 title */
+.videos_two_first {
 	grid-area: 2 / 4 / span 1 / span 1;
 }
-
-.videos_three {
-	grid-area: 4 / 2 / span 1 / span 1;
+/* Video 1 description */
+.videos_two_second {
+	grid-area: 3 / 4 / span 1 / span 1;
 }
 
+/* Video 2 */
+.videos_three {
+	grid-area: 5 / 2 / span 2 / span 1;
+}
+/* Video 2 description anchor */
 .videos_four {
-	grid-area: 4 / 4 / span 1 / span 1;
+	grid-area: 5 / 4 / span 2 / span 1;
+}
+/* Video 2 title */
+.videos_four_first {
+	grid-area: 5 / 4 / span 1 / span 1;
+}
+/* Video 2 description */
+.videos_four_second {
+	grid-area: 6 / 4 / span 1 / span 1;
+}
+
+/* Video 3 */
+.videos_five {
+	grid-area: 8 / 2 / span 2 / span 1;
+}
+/* Video 3 description anchor */
+.videos_six {
+	grid-area: 8 / 4 / span 2 / span 1;
+}
+/* Video 3 title */
+.videos_six_first {
+	grid-area: 8 / 4 / span 1 / span 1;
+}
+/* Video 3 description */
+.videos_six_second {
+	grid-area: 9 / 4 / span 1 / span 1;
+}
+
+/* Video 4 */
+.videos_seven {
+	grid-area: 11 / 2 / span 2 / span 1;
+}
+/* Video 4 description anchor */
+.videos_eight {
+	grid-area: 11 / 4 / span 2 / span 1;
+}
+/* Video 4 title */
+.videos_eight_first {
+	grid-area: 11 / 4 / span 1 / span 1;
+}
+/* Video 4 description */
+.videos_eight_second {
+	grid-are: 12 / 4 / span 1 / span 1;
 }
 
 /* CSS for panel contents */
@@ -83,8 +136,17 @@ CSS used on media page.
 }
 
 .videos_desc {
+	font-family: arial;
 	font-size: 14pt;
 	padding: 5px;
+}
+
+.videos_title {
+	font-family: arial;
+	font-size: 16pt;
+	padding: 5px;
+	background-color: rgb(50, 50, 50);
+	color: white;
 }
 
 /* CSS for articles grid */

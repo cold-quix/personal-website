@@ -13,7 +13,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	position: absolute;
+	position: static;
 	bottom: 0;
 	height: 3rem;
 	color: white;
@@ -51,7 +51,9 @@ footer {
 .intro_desc {
 	font-size: 16pt;
 	text-align: justify;
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* CSS for footer links */

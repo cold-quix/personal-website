@@ -12,7 +12,7 @@ CSS used on projects page.
 	display: grid;
 	grid-template-columns: repeat(5, auto);
 	grid-template-rows: repeat(4, auto);
-	grid-column-gap: 5px;
+	grid-column-gap: 15px;
 	grid-row-gap: 5px;
 	background-color: white;
 	padding: 15px;
@@ -36,7 +36,6 @@ CSS used on projects page.
 	font-size: 14pt;
 	font-family: arial;
 	padding: 10px;
-	max-width: 15rem;
 	background-color: rgba(60, 100, 190, 0.9);
 }
 
@@ -47,12 +46,12 @@ CSS used on projects page.
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	border-left: solid black 2px;
 	border-bottom: solid black 2px;
 	border-right: solid black 2px;
 	font-size: 12pt;
 	font-family: arial;
 	padding: 10px;
-	max-width: 15rem;
 	min-height: 10rem;
 }

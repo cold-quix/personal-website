@@ -50,7 +50,7 @@ CSS used on media page.
 .grid_videos {
 	display: grid;
 	grid-template-columns: repeat(5, auto);
-	grid-template-rows: repeat(13, auto);
+	grid-template-rows: repeat(16, auto);
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 	background-color: white;
@@ -124,7 +124,24 @@ CSS used on media page.
 }
 /* Video 4 description */
 .videos_eight_second {
-	grid-are: 12 / 4 / span 1 / span 1;
+	grid-area: 12 / 4 / span 1 / span 1;
+}
+
+/* Video 5 */
+.videos_nine {
+	grid-area: 14 / 2 / span 2 / span 1;
+}
+/* Video 5 description anchor */
+.videos_ten {
+	grid-area: 14 / 4 / span 2 / span 1;
+}
+/* Video 5 title */
+.videos_ten_first {
+	grid-area: 14 / 4 / span 1 / span 1;
+}
+/* Video 5 description */
+.videos_ten_second {
+	grid-area: 15 / 4 / span 1 / span 1;
 }
 
 /* CSS for panel contents */
@@ -153,9 +170,9 @@ CSS used on media page.
 .grid_articles {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(9, auto);
+	grid-template-rows: repeat(10, auto);
 	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	grid-row-gap: 10px;
 	background-color: white;
 	padding: 15px;
 }
@@ -170,11 +187,11 @@ CSS used on media page.
 }
 
 .articles_three {
-	grid-area: 6 / 2 / span 1 / span 1;
+	grid-area: 7 / 2 / span 1 / span 1;
 }
 
 .articles_four {
-	grid-area: 8 / 2 / span 1 / span 1;
+	grid-area: 9 / 2 / span 1 / span 1;
 }
 
 /* CSS for panel contents */
@@ -183,10 +200,14 @@ CSS used on media page.
 	justify-content: center;
 	align-items: center;
 	font-size: 16pt;
+	font-family: arial;
+	padding: 5px;
 }
 
 .articles_desc {
 	font-size: 14pt;
+	font-family: arial;
+	text-align: center;
 }
 
 /* CSS for other stuff grid */

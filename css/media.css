@@ -216,7 +216,7 @@ CSS used on media page.
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(5, auto);
 	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	grid-row-gap: 10px;
 	background-color: white;
 	padding: 15px;
 }
@@ -227,15 +227,7 @@ CSS used on media page.
 }
 
 .other_two {
-	grid-area: 2 / 4 / span 1 / span 1;
-}
-
-.other_three {
 	grid-area: 4 / 2 / span 1 / span 1;
-}
-
-.other_four {
-	grid-area: 4 / 4 / span 1 / span 1;
 }
 
 /* CSS for panel contents */
@@ -243,13 +235,15 @@ CSS used on media page.
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 14pt;
+	font-size: 16pt;
+	font-family: arial;
 	padding: 5px;
 }
 
 .other_desc {
 	font-size: 14pt;
-	padding: 5px;
+	font-family: arial;
+	text-align: center;
 }
 
 

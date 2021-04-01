@@ -3,6 +3,16 @@
  * This file contains CSS for elements common across all pages.
  */
 
+/* Alert element is present on all pages */
+.alert {
+	display:none;
+	text-align: center;
+	background-color: yellow;
+	font-size: 18pt;
+	padding: 10px;
+	font-family: arial;
+}
+
 /* Body and footer elements are common */
 body {
 	background-color: rgba(255, 175, 90, 1);

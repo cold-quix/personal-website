@@ -7,12 +7,6 @@
         Javascript for the media page.
 */
 
-// Test function
-// should delete for production
-function testClick() {
-		alert("clicked");
-}
-
 // Variables
 var currentShow = "ID-videos";
 

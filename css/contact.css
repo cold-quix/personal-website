@@ -8,7 +8,7 @@ CSS used on contact page.
 /* CSS for grid */
 .contact_grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, auto);
 	grid-template-rows: repeat(7, auto);
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
@@ -54,6 +54,7 @@ CSS used on contact page.
 	justify-content: flex-start;
 	align-items: center;
 	font-size: 14pt;
+	padding: 10px;
 }
 
 

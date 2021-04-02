@@ -10,7 +10,14 @@
 // Variables
 var currentShow = "ID-videos";
 
-// Function that shows/hides divs based on what user clicks
+/*
+	NAME		: showSelection
+	PARAMETERS	: ID
+	RETURN		: None
+	DESCRIPTION	: 
+		Function that shows/hides divs based on what user clicks.
+		ID parameter is the ID of the element which invoked this function.
+*/
 function showSelection(ID) {
 	if (ID == currentShow) {
 		// Do nothing
@@ -42,13 +49,24 @@ function showSelection(ID) {
 	}
 }
 
-// Function which highlights tabs when user mouses over them
+/*
+	NAME		: highlightTab
+	PARAMETERS	: ID
+	RETURN		: None
+	DESCRIPTION	: 
+		Function which highlights tabs when user mouses over them.
+*/
 function highlightTab(ID) {
 	document.getElementById(ID).setAttribute("class", "select_highlight");
 }
 
-
-// Function which un-highlights tabs when user mouses out from them
+/*
+	NAME		: unHighlightTab
+	PARAMETERS	: ID
+	RETURN		: None
+	DESCRIPTION	: 
+		Function which un-highlights tabs when user mouses out from them.
+*/
 function unHighlightTab(ID) {
 	document.getElementById(ID).setAttribute("class", "select_contents");
 }

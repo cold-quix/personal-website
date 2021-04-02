@@ -3,8 +3,8 @@
  * This file contains CSS for elements common across all pages.
  */
 
-/* Alert element is present on all pages */
-.alert {
+/* Alert element used to display warning to IE browsers */
+.IE_alert {
 	display:none;
 	text-align: center;
 	background-color: yellow;

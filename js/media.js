@@ -10,6 +10,10 @@
 // Variables
 var currentShow = "ID-videos";
 
+
+// Functions to run on page load.
+window.addEventListener("load", setListeners());
+
 /*
 	NAME		: showSelection
 	PARAMETERS	: ID
@@ -70,6 +74,49 @@ function highlightTab(ID) {
 function unHighlightTab(ID) {
 	document.getElementById(ID).setAttribute("class", "select_contents");
 }
+
+/*
+	NAME		: setListeners
+	PARAMETERS	: None
+	RETURN		: None
+	DESCRIPTION	: 
+		Function which attaches event listeners to page elements. Called 
+		on page load.
+*/
+function setListeners() {
+	var listenElement = document.getElementById("ID-videos");
+	listenElement.addEventListener("click", function(){showSelection(this.id)}, false);
+	listenElement.addEventListener("mouseover", function(){highlightTab(this.id)}, false);
+	listenElement.addEventListener("mouseout", function(){unHighlightTab(this.id)}, false);
+	
+	listenElement = document.getElementById("ID-articles");
+	listenElement.addEventListener("click", function(){showSelection(this.id)}, false);
+	listenElement.addEventListener("mouseover", function(){highlightTab(this.id)}, false);
+	listenElement.addEventListener("mouseout", function(){unHighlightTab(this.id)}, false);
+	
+	listenElement = document.getElementById("ID-other");
+	listenElement.addEventListener("click", function(){showSelection(this.id)}, false);
+	listenElement.addEventListener("mouseover", function(){highlightTab(this.id)}, false);
+	listenElement.addEventListener("mouseout", function(){unHighlightTab(this.id)}, false);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

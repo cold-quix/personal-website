@@ -17,13 +17,12 @@
 		<link rel="stylesheet" href="../css/style.css">
 		<link rel="stylesheet" href="../css/media.css">
 		
-		<!-- Scripts -->
-		<script src="../js/script.js"></script>
-		<script src="../js/media.js"></script>
-           
+		
+		
+        
 	</head>
 	
-	<body onload="showIEWarning();">
+	<body>
 		<!-- Alert for IE browsers -->
 		<div name="IE_warning" id="ID-IE_warning" class="IE_alert"></div>
 		
@@ -45,9 +44,9 @@
 			<!-- Selection tabs -->
 			<div name="selection_wrapper" id="ID-selection_wrapper" class="select_wrap">
 				<div name="selection_grid" id="ID-selection_grid" class="grid_select">
-					<div class="select_one select_contents" name="videos" id="ID-videos" onclick="showSelection(this.id)"onmouseover="highlightTab(this.id)" onmouseout="unHighlightTab(this.id)">Videos</div>
-					<div class="select_two select_contents" name="articles" id="ID-articles" onclick="showSelection(this.id)" onmouseover="highlightTab(this.id)" onmouseout="unHighlightTab(this.id)">Articles</div>
-					<div class="select_three select_contents" name="other" id="ID-other" onclick="showSelection(this.id)" onmouseover="highlightTab(this.id)" onmouseout="unHighlightTab(this.id)">Other Things</div>
+					<div class="select_one select_contents" name="videos" id="ID-videos">Videos</div>
+					<div class="select_two select_contents" name="articles" id="ID-articles">Articles</div>
+					<div class="select_three select_contents" name="other" id="ID-other">Other Things</div>
 				</div>
 			</div>
 			
@@ -139,11 +138,11 @@
 			</footer>
 		</div>
 		
+		<!-- Scripts -->
+		<script src="../js/script.js"></script>
+		<script src="../js/media.js"></script>
+		
 	</body>
-	
-	
-	
-	
 	
 </html>
 

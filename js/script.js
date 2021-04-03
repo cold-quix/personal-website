@@ -7,8 +7,10 @@
         Javascript common across all pages.
 */
 
+// Functions to run on page load.
+window.addEventListener("load", showIEWarning());
 
-// The two functions below were adapted from: https://w3programmings.com/detect-internet-explorer-and-display-a-warning-message-to-change-the-browser/
+// The isitIE() and showIEWarning() were adapted from: https://w3programmings.com/detect-internet-explorer-and-display-a-warning-message-to-change-the-browser/
 /*
 	NAME		: isItIE
 	PARAMETERS	: None
@@ -34,3 +36,8 @@ function showIEWarning() {
 		document.getElementById("ID-IE_warning").style.display = "block";
 	}
 }
+
+
+
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+    FILE			: spellgen.html
+    PROJECT			: Jack Parkinson's personal website
+    PROGRAMMER		: Jack Parkinson
+    FIRST VERSION	: 2021-04-15
+    DESCRIPTION		:
+        An app that points to a magic spell generator, spellgen.py, 
+		which creates a spell with random elements suitable for use 
+		in a tabletop RPG.
+-->
+<html>
+	<head>
+		<title>Jack Parkinson - Magic Spell Generator</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/spellgen.css">
+        
+	</head>
+	
+	
+	<body>
+		<!-- Alert for IE browsers -->
+		<div name="IE_warning" id="ID-IE_warning" class="IE_alert"></div>
+		
+		<!-- Page wrapper to help anchor footer -->
+		<div name="page_wrapper" id="ID-page_wrapper" class="page_wrap">
+
+			
+			<!-- Intro -->
+			<div name="intro_wrapper" id="ID-intro_wrapper" class="intro_wrap">
+				<div name="intro_name" id="ID-intro_name" class="intro_title">
+					Spell Generator
+				</div>
+				
+				<div name="intro_text_1" id="ID-intro_text_1" class="intro_desc">
+					This application generates a magic spell with random effects for use in a tabletop RPG.
+				</div>
+				
+				<div name="intro_text_2" id="ID-intro_text_2" class="intro_desc">
+					More systems and features to come in the future.
+				</div>
+				  
+			</div>
+			
+			<!-- Spell Output -->
+			<div name="spell_output_wrapper" id="ID-spell_output_wrapper" class="spell_wrap" style="display:none">
+				<div class="spell_attribute_grid">
+					<div class="attribute_title attribute_content">
+						Your randomly generated spell awaits you.  Cast as you will, wizard!
+					</div>
+					
+					<div class="attribute_one attribute_content">
+						Element: 
+					</div>
+					<div class="value_one attribute_content">
+						
+					</div>
+					
+					<div class="attribute_two attribute_content">
+						Targets: 
+					</div>
+					<div class="value_two attribute_content">
+						
+					</div>
+					
+					<div class="attribute_three attribute_content">
+						Shape: 
+					</div>
+					<div class="value_three attribute_content">
+						
+					</div>
+					
+					<div class="attribute_four attribute_content">
+						Damage: 
+					</div>
+					<div class="value_four attribute_content">
+						
+					</div>
+					
+					<div class="attribute_five attribute_content">
+						Effect: 
+					</div>
+					<div class="value_five attribute_content">
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- Navigation -->
+			<div name="spell_nav_wrapper" id="ID-spell_nav_wrapper" class="spell_nav_wrap">
+				<div name="spellgen_grid" id="ID-spellgen_grid" class="spell_nav_grid">
+					<div class="spell_one spellgen_format">
+						<form name="form_generic" method="POST" action="./cgi-bin/spellgen.py">
+							<input name="form_system" id="ID-form_system" type="hidden" value="DND5e">
+							<input name="submit_system" id="ID-submit_system" type="submit" value="Dungeons & Dragons 5th Edition" class="spellgen_link">
+						</form>
+					</div>
+					
+					<div class="spell_two spellgen_format">
+						<form name="form_generic" method="POST" action="./cgi-bin/spellgen.py">
+							<input name="form_system" id="ID-form_system" type="hidden" value="PF1e">
+							<input name="submit_generic" id="submit_generic" type="submit" value="Pathfinder 1st Edition" class="spellgen_link">
+						</form>
+					</div>
+					
+					<div class="spell_three spellgen_format">
+						<form name="form_generic" method="POST" action="./cgi-bin/spellgen.py">
+							<input name="form_system" id="ID-form_system" type="hidden" value="generic">
+							<input name="submit_generic" id="submit_generic" type="submit" value="Generic" class="spellgen_link" >
+						</form>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- Lines to prevent footer overlapping content. -->
+			<br>
+			
+			<!-- Footer -->
+			<footer>
+				<div class="footer_grid">
+					<div class="footer_grid_content footer_grid_one">
+						<a href="../index.html" class="footer_link">Home</a>
+					</div>
+					<div class="footer_grid_content footer_grid_two">
+						<a href="../projects.html" class="footer_link">Projects</a>
+					</div>
+					<div class="footer_grid_content footer_grid_three">
+						<a href="../media.html" class="footer_link">Media</a>
+					</div>
+					<div class="footer_grid_content footer_grid_four">
+						<a href="../contact.html" class="footer_link">Contact</a>
+					</div>
+					<div class="footer_grid_content footer_grid_five">
+						<a href="../blog.html" class="footer_link">Blog</a>
+					</div>
+				</div>	
+			</footer>
+		</div>
+		
+		<!-- Scripts -->
+		<script src="../js/script.js"></script>
+		
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

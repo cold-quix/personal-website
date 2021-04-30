@@ -1,0 +1,125 @@
+/*
+CSS used in spellgen.html and spellgen.py
+*/
+
+/* CSS for spellgen navigation */
+.spell_nav_wrap {
+	width: 100%;
+}
+
+/* CSS for spellgen grid */
+.spell_nav_grid {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(7, auto);
+	grid-column-gap: 15px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
+/* CSS for spellgen formatting */
+.spellgen_format {
+	display: flex;
+	justify-content: center;
+}
+
+/* CSS for spellgen link positions in grid */
+.spell_one {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.spell_two {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.spell_three {
+	grid-area: 6 / 2 / span 1 / span 1;
+}
+
+/* CSS for gridpanels with links */
+.spellgen_link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14pt;
+	font-family: arial;
+	padding: 20px;
+	background-color: rgba(60, 100, 190, 0.9);
+	color: white;
+}
+
+/* CSS for spell output */
+.spell_wrap {
+	width: 100%;
+}
+
+/* CSS for spell output */
+.spell_attribute_grid {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(13, auto);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	background-color: white;
+	padding: 15px;
+}
+
+/* CSS for spell output */
+.attribute_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14pt;
+	font-family: arial;
+	padding: 20px;
+	background-color: rgba(160, 100, 190, 1);
+	color: black;
+}
+
+/* CSS for spell attribute positions in grid */
+.attribute_title {
+	grid-area: 2 / 2 / span 1 / span 3;
+}
+
+.attribute_one {
+	grid-area: 4 / 2 / span 1 / span 2;
+}
+
+.attribute_two {
+	grid-area: 6 / 2 / span 1 / span 2;
+}
+
+.attribute_three {
+	grid-area: 8 / 2 / span 1 / span 2;
+}
+
+.attribute_four {
+	grid-area: 10 / 2 / span 1 / span 2;
+}
+
+.attribute_five {
+	grid-area: 12 / 2 / span 1 / span 2;
+}
+
+/* CSS for spell attribute value positions in grid */
+.value_one {
+	grid-area: 4 / 4 / span 1 / span 1;
+}
+
+.value_two{
+	grid-area: 6 / 4 / span 1 / span 1;
+}
+
+.value_three{
+	grid-area: 8 / 4 / span 1 / span 1;
+}
+
+.value_four{
+	grid-area: 10 / 4 / span 1 / span 1;
+}
+
+.value_five{
+	grid-area: 12 / 4 / span 1 / span 1;
+}
+
+

@@ -56,7 +56,7 @@ CSS used in spellgen.html and spellgen.py
 /* CSS for spell output */
 .spell_attribute_grid {
 	display: grid;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(4, auto);
 	grid-template-rows: repeat(13, auto);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
@@ -78,48 +78,48 @@ CSS used in spellgen.html and spellgen.py
 
 /* CSS for spell attribute positions in grid */
 .attribute_title {
-	grid-area: 2 / 2 / span 1 / span 3;
+	grid-area: 2 / 2 / span 1 / span 2;
 }
 
 .attribute_one {
-	grid-area: 4 / 2 / span 1 / span 2;
+	grid-area: 4 / 2 / span 1 / span 1;
 }
 
 .attribute_two {
-	grid-area: 6 / 2 / span 1 / span 2;
+	grid-area: 6 / 2 / span 1 / span 1;
 }
 
 .attribute_three {
-	grid-area: 8 / 2 / span 1 / span 2;
+	grid-area: 8 / 2 / span 1 / span 1;
 }
 
 .attribute_four {
-	grid-area: 10 / 2 / span 1 / span 2;
+	grid-area: 10 / 2 / span 1 / span 1;
 }
 
 .attribute_five {
-	grid-area: 12 / 2 / span 1 / span 2;
+	grid-area: 12 / 2 / span 1 / span 1;
 }
 
 /* CSS for spell attribute value positions in grid */
 .value_one {
-	grid-area: 4 / 4 / span 1 / span 1;
+	grid-area: 4 / 3 / span 1 / span 1;
 }
 
 .value_two{
-	grid-area: 6 / 4 / span 1 / span 1;
+	grid-area: 6 / 3 / span 1 / span 1;
 }
 
 .value_three{
-	grid-area: 8 / 4 / span 1 / span 1;
+	grid-area: 8 / 3 / span 1 / span 1;
 }
 
 .value_four{
-	grid-area: 10 / 4 / span 1 / span 1;
+	grid-area: 10 / 3 / span 1 / span 1;
 }
 
 .value_five{
-	grid-area: 12 / 4 / span 1 / span 1;
+	grid-area: 12 / 3 / span 1 / span 1;
 }
 
 

@@ -4,6 +4,68 @@ CSS used in pokertracker.html
 
 
 
+/* Parent class for grid */
+.chip_grid {
+	display: grid;
+	grid-template-columns: repeat(7, 5rem);
+	grid-template-rows: repeat(13, 5rem);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	background-color: white;
+	padding: 15px;
+}
+
+/* CSS for grid contents */
+.grid_label {
+	outline: 2px solid black;
+}
+
+.grid_field {
+	outline: 2px solid red;
+}
+
+/* CSS for grid panel positions */
+.grid_label_bbmf {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+.grid_field_bbmf {
+	grid-area: 2 / 4 / span 1 / span 1;
+}
+.grid_label_toggle {
+	grid-area: 2 / 6 / span 1 / span 1;
+}
+.grid_field_toggle {
+	
+}
+
+.grid_label_stack {
+	grid-area: 4 / 2 / span 1 / span 1;
+}
+.grid_field_stack {
+	grid-area: 4 / 4 / span 1 / span 3;
+}
+
+
+.grid_label_bb {
+	grid-area: 6 / 2 / span 1 / span 1;
+}
+.grid_field_bb {
+	grid-area: 6 / 4 / span 1 / span 3;
+}
+
+.grid_label_sb {
+	grid-area: 8 / 2 / span 1 / span 1;
+}
+.grid_field_sb {
+	grid-area: 8 / 4 / span 1 / span 3;
+}
+
+.grid_label_ante {
+	grid-area: 10 / 2 / span 1 / span 1;
+}
+.grid_field_ante {
+	grid-area: 10 / 4 / span 1 / span 3;
+}
 
 
 

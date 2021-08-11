@@ -31,11 +31,23 @@
 			
 			<!-- Timer -->
 			<div name="timer_wrapper" id="ID-timer_wrapper" class="">
-				<div name="timer_title" id="ID-timer_title" class="">Round Timer</div>
+				<div name="timer_title" id="ID-timer_title" class=""></div>
 				
-				<div name="timer_content" id="ID-timer_content" class="">
-					<div name="timer_control" id="ID-timer_control" class="">Start/Stop</div>
-					<div name="timer_field" id="ID-timer_field" class="">[timer display]</div>
+				<div name="timer_content" id="ID-timer_content" class="timer_grid">
+					<div name="timer_startstop" id="ID-timer_startstop" class="timer_button timer_startstop">Start/Stop</div>
+					<div name="timer_reset" id="ID-timer_reset" class="timer_button timer_reset">reset</div>
+					
+					<div name="timer_field" id="ID-timer_field" class="timer_label timer_display"></div>
+					
+					<div name="hours_plus" id="ID-hours_plus" class="timer_button timer_hoursplus">hours++</div>
+					<div name="hours_minus" id="ID-hours_minus" class="timer_button timer_hoursminus">hours--</div>
+					<div name="minutes_plus" id="ID-minutes_plus" class="timer_button timer_minutesplus">minutes++</div>
+					<div name="minutes_minus" id="ID-minutes_minus" class="timer_button timer_minutesminus">minutes--</div>
+					
+					
+					
+					
+					
 				</div>
 				
 			</div>
@@ -44,25 +56,25 @@
 			
 			<!-- Chip Data -->
 			<div name="chip_wrapper" id="ID-chip_wrapper" class="">
-				<div name="chip_title" id="ID-chip_title" class="">Chip Stack</div>
+				<div name="chip_title" id="ID-chip_title" class=""></div>
 				
 				<div name="chip_content" id="ID-chip_contents" class="chip_grid">
 					
 					<div name="bbmf_label" id="ID-bbmf_label" class="grid_label grid_label_bbmf">Big Blinds Remaining</div>
-					<div name="bbmf_field" id="ID-bbmf_field" class="grid_field grid_field_bbmf">bb_mf_value</div>
-					<div name="bbmf_toggle" id="ID-bbmf_toggle" class="grid_label grid_label_toggle">Toggle button</div>
+					<div name="bbmf_field" id="ID-bbmf_field" class="grid_field grid_field_bbmf"></div>
+					<div name="bbmf_toggle" id="ID-bbmf_toggle" class="grid_label grid_label_toggle">Toggle</div>
 					
 					<div class="grid_label grid_label_stack">Stack</div>
 					<input name="stack_input" id="ID-stack_input" type="text" class="grid_field grid_field_stack">
 					
 					<div class="grid_label grid_label_bb">Big Blind</div>
-					<input type="text" class="grid_field grid_field_bb">
+					<input name="bb_input" id="ID-bb_input" type="text" class="grid_field grid_field_bb">
 					
 					<div class="grid_label grid_label_sb">Small Blind</div>
-					<input type="text" class="grid_field grid_field_sb">
+					<input name="sb_input" id="ID-sb_input" type="text" class="grid_field grid_field_sb">
 					
 					<div class="grid_label grid_label_ante">Ante</div>
-					<input type="text" class="grid_field grid_field_ante">
+					<input name="ante_input" id="ID-ante_input" type="text" class="grid_field grid_field_ante">
 					
 					
 					

@@ -4,29 +4,45 @@ CSS used in pokertracker.html
 
 
 
-/* Parent class for grid */
+/* Parent class for chip grid */
 .chip_grid {
 	display: grid;
-	grid-template-columns: repeat(7, 5rem);
-	grid-template-rows: repeat(13, 5rem);
+	grid-template-columns: repeat(7, auto);
+	grid-template-rows: repeat(15, auto);
 	grid-column-gap: 5px;
 	grid-row-gap: 5px;
 	background-color: white;
 	padding: 15px;
 }
 
-/* CSS for grid contents */
+/* CSS for chip grid contents */
 .grid_label {
-	outline: 2px solid black;
+	width: 10rem;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	padding: 10px;
 }
 
 .grid_field {
-	outline: 2px solid red;
+	outline: 2px solid black;
 }
 
-/* CSS for grid panel positions */
+/* CSS for highlighted toggle tab */
+.select_highlight {
+	background-color: rgba(220, 50, 60, 1.0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18pt;
+	text-decoration: underline;
+	height: 3rem;
+	border: solid white 2px;
+}
+
+/* CSS for chip grid panel positions */
 .grid_label_bbmf {
-	grid-area: 2 / 2 / span 1 / span 1;
+	grid-area: 2 / 3 / span 1 / span 1;
 }
 .grid_field_bbmf {
 	grid-area: 2 / 4 / span 1 / span 1;
@@ -39,7 +55,7 @@ CSS used in pokertracker.html
 }
 
 .grid_label_stack {
-	grid-area: 4 / 2 / span 1 / span 1;
+	grid-area: 4 / 3 / span 1 / span 1;
 }
 .grid_field_stack {
 	grid-area: 4 / 4 / span 1 / span 3;
@@ -47,25 +63,85 @@ CSS used in pokertracker.html
 
 
 .grid_label_bb {
-	grid-area: 6 / 2 / span 1 / span 1;
+	grid-area: 6 / 3 / span 1 / span 1;
 }
 .grid_field_bb {
 	grid-area: 6 / 4 / span 1 / span 3;
 }
 
 .grid_label_sb {
-	grid-area: 8 / 2 / span 1 / span 1;
+	grid-area: 8 / 3 / span 1 / span 1;
 }
 .grid_field_sb {
 	grid-area: 8 / 4 / span 1 / span 3;
 }
 
 .grid_label_ante {
-	grid-area: 10 / 2 / span 1 / span 1;
+	grid-area: 10 / 3 / span 1 / span 1;
 }
 .grid_field_ante {
 	grid-area: 10 / 4 / span 1 / span 3;
 }
+
+
+/* Parent class for timer grid */
+.timer_grid {
+	display: grid;
+	grid-template-columns: repeat(15, auto);
+	grid-template-rows: repeat(3, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	color: white;
+	background-color: rgba(60, 100, 190, 0.9);
+	padding: 15px;
+}
+
+/* CSS for timer grid contents */
+.timer_label {
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	outline: 3px solid black;
+}
+
+/* CSS for timer buttons */
+.timer_button {
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	outline: 3px solid red;
+}
+
+/* CSS for timer grid positions */
+.timer_startstop {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.timer_reset {
+	grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.timer_display {
+	grid-area: 2 / 6 / span 1 / span 1;
+}
+
+.timer_hoursplus {
+	grid-area: 2 / 8 / span 1 / span 1;
+}
+
+.timer_hoursminus {
+	grid-area: 2 / 10 / span 1 / span 1;
+}
+
+.timer_minutesplus {
+	grid-area: 2 / 12 / span 1 / span 1;
+}
+
+.timer_minutesminus {
+	grid-area: 2 / 14 / span 1 / span 1;
+}
+
+
 
 
 

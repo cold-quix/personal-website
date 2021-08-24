@@ -15,6 +15,8 @@ window.addEventListener("load", setListeners());
 // Variables
 var BBMFState = "BB";
 var isTimerRunning = false;
+var timerIntervalID = 0;
+var timeMillis = 0;
 
 
 function test() {
@@ -22,26 +24,118 @@ function test() {
 }
 
 /*
-	NAME		: 
+	NAME		: timerStartStop
 	PARAMETERS	: None
 	RETURN		: None
 	DESCRIPTION	: 
-		
+		Finds the current timer state, and either start/stop timer accordingly, 
+		then changes the isTimerRunning variable to account for it.
 */
 function timerStartStop() {
-	alert("stopping/starting timer");
+	// Find the current timer state, and either start/stop timer accordingly
+	if (isTimerRunning) {
+		// Stop timer
+		timerStop();
+		
+	}
+	else {
+		// Start timer
+		timerStart();
+		
+	}
 }
 
 /*
-	NAME		: 
+	NAME		: timerReset
 	PARAMETERS	: None
 	RETURN		: None
 	DESCRIPTION	: 
-		
+		Resets timer to default values and ends any timer still running.
 */
 function timerReset() {
-	alert("resetting timer");
+	// Reset values to sane defaults
+	document.getElementById("ID-hours_select").value = 0;
+	document.getElementById("ID-minutes_select").value = 0;
+	document.getElementById("ID-timer_field").innerHTML = "00:00:00";
+	isTimerRunning = false;
+	// End timer interval
+	clearInterval(timerIntervalID);
 }
+
+/*
+	NAME		: timerStart
+	PARAMETERS	: None
+	RETURN		: None
+	DESCRIPTION	: 
+		Gets the number of milliseconds the timer should run for based 
+		on the user's selections, then starts the timer for that amount 
+		of time.
+*/
+function timerStart() {
+	// Update timer global variable
+	isTimerRunning = true;
+	
+	// Get the starting hours and minutes
+	var tempHours = Number(document.getElementById("ID-hours_select").value);
+	var tempMinutes = Number(document.getElementById("ID-minutes_select").value);
+	// Convert to milliseconds
+	timeMillis = (tempMinutes * 60000) + (tempHours * 3600000);
+	// If time > 0, begin timer
+	if (timeMillis > 0) {
+		timerRun(); // Update the timer immediately, then start countdown
+		timerIntervalID = setInterval(timerRun, 1000);
+	}
+	else {
+		// Reset the values and display an error message
+		alert("Error: time is 0."); // PLACEHOLDER
+		timerReset();
+	}
+}
+
+/*
+	NAME		: timerStop
+	PARAMETERS	: None
+	RETURN		: None
+	DESCRIPTION	: 
+		Stops the timer.
+*/
+function timerStop() {
+	// Update timer global variable
+	isTimerRunning = false;
+}
+
+/*
+	NAME		: timerRun
+	PARAMETERS	: None
+	RETURN		: None
+	DESCRIPTION	: 
+		Interval function called by setInterval in startTimer.
+		Ticks down one second at a time and updates the timer display.
+*/
+function timerRun() {
+	// Copy the number of milliseconds, then calculate each subdivision of hr/min/sec
+	// Then subtract whatever milliseconds made up the subdivision
+	var tempMillis = timeMillis;
+	var hours = Math.trunc(tempMillis / 3600000);
+	tempMillis -= (hours * 3600000);
+	var minutes = Math.trunc(tempMillis / 60000);
+	tempMillis -= (minutes * 60000);
+	var seconds = Math.trunc(tempMillis / 1000);
+	tempMillis -= (seconds * 1000);
+	
+	
+	// Update display with human-readable time
+	hours = ("00" + hours).slice(-2);
+	minutes = ("00" + minutes).slice(-2);
+	seconds = ("00" + seconds).slice(-2);
+	document.getElementById("ID-timer_field").innerHTML = hours + ":" + minutes + ":" + seconds
+	
+	// Downtick by one second
+	timeMillis -= 1000;
+	
+}
+
+
 
 /*
 	NAME		: 
@@ -50,42 +144,7 @@ function timerReset() {
 	DESCRIPTION	: 
 		
 */
-function timerHourPlus() {
-	alert("hours +");
-}
 
-/*
-	NAME		: 
-	PARAMETERS	: None
-	RETURN		: None
-	DESCRIPTION	: 
-		
-*/
-function timerHourMinus() {
-	alert("hours -");
-}
-
-/*
-	NAME		: 
-	PARAMETERS	: None
-	RETURN		: None
-	DESCRIPTION	: 
-		
-*/
-function timerMinutePlus() {
-	alert("minute +");
-}
-
-/*
-	NAME		: 
-	PARAMETERS	: None
-	RETURN		: None
-	DESCRIPTION	: 
-		
-*/
-function timerMinuteMinus() {
-	alert("minute -");
-}
 
 
 
@@ -216,18 +275,10 @@ function setListeners() {
 	
 	// Timer controls
 	listenElement = document.getElementById("ID-timer_startstop");
-	listenElement.addEventListener("click", function(){timerStartStop(isTimerRunning)}, false);
+	listenElement.addEventListener("click", function(){timerStartStop()}, false);
 	listenElement = document.getElementById("ID-timer_reset");
 	listenElement.addEventListener("click", function(){timerReset()}, false);
 	
-	listenElement = document.getElementById("ID-hours_plus");
-	listenElement.addEventListener("click", function(){timerHourPlus()}, false);
-	listenElement = document.getElementById("ID-hours_minus");
-	listenElement.addEventListener("click", function(){timerHourMinus()}, false);
-	listenElement = document.getElementById("ID-minutes_plus");
-	listenElement.addEventListener("click", function(){timerMinutePlus()}, false);
-	listenElement = document.getElementById("ID-minutes_minus");
-	listenElement.addEventListener("click", function(){timerMinuteMinus()}, false);
 }
 
 

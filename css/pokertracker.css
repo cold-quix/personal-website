@@ -125,7 +125,7 @@ CSS used in pokertracker.html
 	grid-area: 2 / 6 / span 1 / span 1;
 }
 
-.timer_hoursplus {
+.timer_hourselect {
 	grid-area: 2 / 8 / span 1 / span 1;
 }
 
@@ -133,7 +133,7 @@ CSS used in pokertracker.html
 	grid-area: 2 / 10 / span 1 / span 1;
 }
 
-.timer_minutesplus {
+.timer_minuteselect {
 	grid-area: 2 / 12 / span 1 / span 1;
 }
 

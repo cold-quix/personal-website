@@ -37,12 +37,33 @@
 					<div name="timer_startstop" id="ID-timer_startstop" class="timer_button timer_startstop">Start/Stop</div>
 					<div name="timer_reset" id="ID-timer_reset" class="timer_button timer_reset">reset</div>
 					
-					<div name="timer_field" id="ID-timer_field" class="timer_label timer_display"></div>
+					<div name="timer_field" id="ID-timer_field" class="timer_label timer_display">00:00:00</div>
 					
-					<div name="hours_plus" id="ID-hours_plus" class="timer_button timer_hoursplus">hours++</div>
-					<div name="hours_minus" id="ID-hours_minus" class="timer_button timer_hoursminus">hours--</div>
-					<div name="minutes_plus" id="ID-minutes_plus" class="timer_button timer_minutesplus">minutes++</div>
-					<div name="minutes_minus" id="ID-minutes_minus" class="timer_button timer_minutesminus">minutes--</div>
+					
+					<select name="hours_select" id="ID-hours_select" class="timer_button timer_hourselect">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					
+					<select name="minutes_select" id="ID-minutes_select" class="timer_button timer_minuteselect">
+						<option value="0">0</option>
+						<option value="5">5</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="35">35</option>
+						<option value="40">40</option>
+						<option value="45">45</option>
+						<option value="50">50</option>
+						<option value="55">55</option>
+					</select>
+					
+					<div name="hours_minus" id="ID-hours_minus" class="timer_button timer_hoursminus">unused</div>
+					<div name="minutes_minus" id="ID-minutes_minus" class="timer_button timer_minutesminus">unused</div>
 					
 					
 					

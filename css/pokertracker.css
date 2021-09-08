@@ -87,7 +87,7 @@ CSS used in pokertracker.html
 /* Parent class for timer grid */
 .timer_grid {
 	display: grid;
-	grid-template-columns: repeat(15, auto);
+	grid-template-columns: repeat(11, auto);
 	grid-template-rows: repeat(3, auto);
 	grid-column-gap: 5px;
 	grid-row-gap: 5px;
@@ -109,7 +109,7 @@ CSS used in pokertracker.html
 	display: flex;
 	justify-content: center;
 	vertical-align: center;
-	outline: 3px solid red;
+	outline: 3px solid white;
 }
 
 /* CSS for timer grid positions */
@@ -129,17 +129,10 @@ CSS used in pokertracker.html
 	grid-area: 2 / 8 / span 1 / span 1;
 }
 
-.timer_hoursminus {
+.timer_minuteselect {
 	grid-area: 2 / 10 / span 1 / span 1;
 }
 
-.timer_minuteselect {
-	grid-area: 2 / 12 / span 1 / span 1;
-}
-
-.timer_minutesminus {
-	grid-area: 2 / 14 / span 1 / span 1;
-}
 
 
 

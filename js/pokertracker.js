@@ -231,7 +231,7 @@ function updateBBMF(mode) {
 		var tempBB = Number(document.getElementById("ID-bb_input").value);
 		var tempSB = Number(document.getElementById("ID-sb_input").value);
 		var tempAnte = Number(document.getElementById("ID-ante_input").value);
-		var tempNumPlayers = 10; // Assume 10 players for a full table
+		var tempNumPlayers = Number(document.getElementById("ID-players_select").value);
 		
 		var tempDenom = tempBB + tempSB + (tempAnte * tempNumPlayers);
 		var tempMFactor = tempStack / tempDenom;
@@ -271,6 +271,8 @@ function setListeners() {
 	listenElement = document.getElementById("ID-sb_input");
 	listenElement.addEventListener("input", function(){updateBBMF(BBMFState)}, false);
 	listenElement = document.getElementById("ID-ante_input");
+	listenElement.addEventListener("input", function(){updateBBMF(BBMFState)}, false);
+	listenElement = document.getElementById("ID-players_select");
 	listenElement.addEventListener("input", function(){updateBBMF(BBMFState)}, false);
 	
 	// Timer controls

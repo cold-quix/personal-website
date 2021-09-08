@@ -8,7 +8,7 @@ CSS used in pokertracker.html
 .chip_grid {
 	display: grid;
 	grid-template-columns: repeat(7, auto);
-	grid-template-rows: repeat(15, auto);
+	grid-template-rows: repeat(17, auto);
 	grid-column-gap: 5px;
 	grid-row-gap: 5px;
 	background-color: white;
@@ -50,9 +50,6 @@ CSS used in pokertracker.html
 .grid_label_toggle {
 	grid-area: 2 / 6 / span 1 / span 1;
 }
-.grid_field_toggle {
-	
-}
 
 .grid_label_stack {
 	grid-area: 4 / 3 / span 1 / span 1;
@@ -80,9 +77,18 @@ CSS used in pokertracker.html
 	grid-area: 10 / 3 / span 1 / span 1;
 }
 .grid_field_ante {
-	grid-area: 10 / 4 / span 1 / span 3;
+	grid-area: 10 / 4 / span 1 / span 1;
+}
+.grid_label_toggle_ante {
+	grid-area: 10 / 6 / span 1 / span 1;
 }
 
+.grid_label_players {
+	grid-area: 12 / 3 / span 1 / span 1;
+}
+.grid_field_players {
+	grid-area: 12 / 4 / span 1 / span 1;
+}
 
 /* Parent class for timer grid */
 .timer_grid {

@@ -77,10 +77,7 @@ CSS used in pokertracker.html
 	grid-area: 10 / 3 / span 1 / span 1;
 }
 .grid_field_ante {
-	grid-area: 10 / 4 / span 1 / span 1;
-}
-.grid_label_toggle_ante {
-	grid-area: 10 / 6 / span 1 / span 1;
+	grid-area: 10 / 4 / span 1 / span 3;
 }
 
 .grid_label_players {
@@ -112,6 +109,14 @@ CSS used in pokertracker.html
 
 /* CSS for timer buttons */
 .timer_button {
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	outline: 3px solid white;
+}
+
+.timer_button_highlighted {
+	background-color: rgba(220, 50, 60, 1.0);
 	display: flex;
 	justify-content: center;
 	vertical-align: center;

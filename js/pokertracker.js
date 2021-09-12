@@ -13,35 +13,31 @@
 window.addEventListener("load", setListeners());
 
 // Variables
-var BBMFState = "BB";
+var BBMFState = "BB"; // either "BB" or "MF"
 var isTimerRunning = false;
 var timerIntervalID = 0;
 var timeMillis = 0;
 
 
-function test() {
-	alert("test successful");
-}
-
+// Functions
 /*
 	NAME		: timerStartStop
 	PARAMETERS	: None
 	RETURN		: None
 	DESCRIPTION	: 
-		Finds the current timer state, and either start/stop timer accordingly, 
-		then changes the isTimerRunning variable to account for it.
+		Starts timer running if it isn't already.  If the timer is running, 
+		nothing happens.
 */
-function timerStartStop() {
+function timerStart() {
 	// Find the current timer state, and either start/stop timer accordingly
 	if (isTimerRunning) {
-		// Stop timer
-		timerStop();
-		
+		// Do nothing
+		alert("not starting timer");
 	}
 	else {
 		// Start timer
 		timerStart();
-		
+		alert("starting timer");
 	}
 }
 
@@ -70,11 +66,10 @@ function timerReset() {
 		Gets the number of milliseconds the timer should run for based 
 		on the user's selections, then starts the timer for that amount 
 		of time.
+		
+		This function calls timerReset() to ensure the timer always starts cleanly.
 */
 function timerStart() {
-	// Update timer global variable
-	isTimerRunning = true;
-	
 	// Get the starting hours and minutes
 	var tempHours = Number(document.getElementById("ID-hours_select").value);
 	var tempMinutes = Number(document.getElementById("ID-minutes_select").value);
@@ -82,6 +77,7 @@ function timerStart() {
 	timeMillis = (tempMinutes * 60000) + (tempHours * 3600000);
 	// If time > 0, begin timer
 	if (timeMillis > 0) {
+		timerReset(); // Clean anything left by the previous interval
 		timerRun(); // Update the timer immediately, then start countdown
 		timerIntervalID = setInterval(timerRun, 1000);
 	}
@@ -90,6 +86,9 @@ function timerStart() {
 		alert("Error: time is 0."); // PLACEHOLDER
 		timerReset();
 	}
+	
+	// Update timer global variable
+	isTimerRunning = true;
 }
 
 /*
@@ -135,19 +134,6 @@ function timerRun() {
 	
 }
 
-
-
-/*
-	NAME		: 
-	PARAMETERS	: None
-	RETURN		: None
-	DESCRIPTION	: 
-		
-*/
-
-
-
-
 /*
 	NAME		: toggleBBMF
 	PARAMETERS	: None
@@ -157,7 +143,7 @@ function timerRun() {
 */
 function toggleBBMF() {
 	if (BBMFState == "BB") {
-		//set to mf
+		// set to mf
 		document.getElementById("ID-bbmf_label").innerHTML = "M-Factor";
 		BBMFState = "MF";
 		updateBBMF(BBMFState);
@@ -176,25 +162,25 @@ function toggleBBMF() {
 	RETURN		: BBRemaining
 	DESCRIPTION	: 
 		Calculates the number of big blinds remaining in a stack of poker chips.
-		Truncates to 2 decimal places.
+		Truncates to 1 decimal place.
 */
 function calculateBB(stack, bigBlind){
 	var BBRemaining = stack/bigBlind;
-	BBRemaining.toFixed(2);
+	BBRemaining = Number(BBRemaining.toFixed(1));
 	return BBRemaining;
 }
 
 /*
 	NAME		: calculateMF
-	PARAMETERS	: stack, bigBlind, smallBlind, ante
+	PARAMETERS	: stack, bigBlind, smallBlind, ante, numPlayers
 	RETURN		: MFRemaining
 	DESCRIPTION	: 
-		Calculates the M-Factor for a given stack, big and small blind.
-		Truncates to 2 decimal places.
+		Calculates the M-Factor for a given stack, big and small blind, and ante.
+		Truncates to 1 decimal place.
 */
-function calculateMF(stack, bigBlind, smallBlind) {
-	var MFRemaining = stack / (bigBlind + smallBlind);
-	MFRemaining.toFixed(2);
+function calculateMF(stack, bigBlind, smallBlind, ante, numPlayers) {
+	var MFRemaining = stack / (bigBlind + smallBlind + (ante * numPlayers));
+	MFRemaining = Number(MFRemaining.toFixed(1));
 	return MFRemaining;	
 }
 
@@ -206,12 +192,12 @@ function calculateMF(stack, bigBlind, smallBlind) {
 		Updates the Big Blind or M-Factor label depending on which is appropriate.
 		Does nothing if the output would be ugly/broken.
 */
-function updateBBMF(mode) {
-	if (mode == "BB") {
+function updateBBMF() {
+	if (BBMFState == "BB") {
 		// Update appropriate part of page with BB value
 		var tempStack = Number(document.getElementById("ID-stack_input").value);
 		var tempBB = Number(document.getElementById("ID-bb_input").value);
-		var tempBBRemaining = tempStack / tempBB;
+		var tempBBRemaining = calculateBB(tempStack, tempBB);
 		
 		// Don't update with ugly output
 		if (Number.isNaN(tempBBRemaining, NaN)) {
@@ -224,7 +210,7 @@ function updateBBMF(mode) {
 			document.getElementById("ID-bbmf_field").innerHTML = tempBBRemaining;
 		}
 	}
-	else if (mode == "MF") {
+	else {
 		// Update appropriate part of page with MF value
 		
 		var tempStack = Number(document.getElementById("ID-stack_input").value);
@@ -233,8 +219,7 @@ function updateBBMF(mode) {
 		var tempAnte = Number(document.getElementById("ID-ante_input").value);
 		var tempNumPlayers = Number(document.getElementById("ID-players_select").value);
 		
-		var tempDenom = tempBB + tempSB + (tempAnte * tempNumPlayers);
-		var tempMFactor = tempStack / tempDenom;
+		var tempMFactor = calculateMF(tempStack, tempBB, tempSB, tempAnte, tempNumPlayers);
 		
 		// Don't update with ugly output
 		if (Number.isNaN(tempMFactor, NaN)) {
@@ -251,6 +236,38 @@ function updateBBMF(mode) {
 }
 
 /*
+	NAME		: highlightTab
+	PARAMETERS	: ID
+	RETURN		: None
+	DESCRIPTION	: 
+		Function which highlights tabs when user mouses over them.
+*/
+function highlightTab(ID) {
+if (ID == "ID-timer_startstop") {
+		document.getElementById(ID).setAttribute("class", "timer_button_highlighted timer_startstop");
+	}
+	else if (ID == "ID-timer_reset") {
+		document.getElementById(ID).setAttribute("class", "timer_button_highlighted timer_reset");
+	}}
+
+/*
+	NAME		: unHighlightTab
+	PARAMETERS	: ID
+	RETURN		: None
+	DESCRIPTION	: 
+		Function which un-highlights tabs when user mouses out from them.
+*/
+function unHighlightTab(ID) {
+	if (ID == "ID-timer_startstop") {
+		document.getElementById(ID).setAttribute("class", "timer_button timer_startstop");
+	}
+	else if (ID == "ID-timer_reset") {
+		document.getElementById(ID).setAttribute("class", "timer_button timer_reset");
+	}
+}
+
+
+/*
 	NAME		: setListeners
 	PARAMETERS	: None
 	RETURN		: None
@@ -259,7 +276,7 @@ function updateBBMF(mode) {
 		on page load.
 */
 function setListeners() {
-	// Toggle big blind/M-factor display
+	// Toggle buttons for big blind/m-factor display and ante mode
 	var listenElement = document.getElementById("ID-bbmf_toggle");
 	listenElement.addEventListener("click", function(){toggleBBMF()}, false);
 	
@@ -277,9 +294,15 @@ function setListeners() {
 	
 	// Timer controls
 	listenElement = document.getElementById("ID-timer_startstop");
-	listenElement.addEventListener("click", function(){timerStartStop()}, false);
+	listenElement.addEventListener("click", function(){timerStart()}, false);
+	listenElement.addEventListener("mouseover", function(){highlightTab(this.id)}, false);
+	listenElement.addEventListener("mouseout", function(){unHighlightTab(this.id)}, false);
+	
 	listenElement = document.getElementById("ID-timer_reset");
 	listenElement.addEventListener("click", function(){timerReset()}, false);
+	listenElement.addEventListener("mouseover", function(){highlightTab(this.id)}, false);
+	listenElement.addEventListener("mouseout", function(){unHighlightTab(this.id)}, false);
+
 	
 }
 

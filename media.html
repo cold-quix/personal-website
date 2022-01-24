@@ -46,14 +46,15 @@
 				<div name="selection_grid" id="ID-selection_grid" class="grid_select">
 					<div class="select_one select_contents" name="videos" id="ID-videos">Videos</div>
 					<div class="select_two select_contents" name="articles" id="ID-articles">Articles</div>
-					<div class="select_three select_contents" name="other" id="ID-other">Other Things</div>
+					<div class="select_three select_contents" name="other" id="ID-other">Technical Writing</div>
 				</div>
 			</div>
 			
 			<!-- Media item wrapper -->
 			<div name="list_wrapper" id="ID-list_wrapper">
 				<!-- Media items -->
-				<div name="list_videos" id="ID-list_videos"> <!-- Videos are shown by default -->
+				<!-- Videos are shown by default -->
+				<div name="list_videos" id="ID-list_videos">
 					<div name="videos_wrapper" id="ID-videos_wrapper">
 						<div name="videos_grid" id="ID-videos_grid" class="grid_videos">
 							<div class="videos_one videos_content"><iframe src="https://www.youtube-nocookie.com/embed/m7EnCio9O6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -65,7 +66,7 @@
 							<div class="videos_three videos_content"><iframe src="https://www.youtube-nocookie.com/embed/wjOh1vXUjJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 							<div class="videos_four">
 								<div class="videos_four_first videos_content videos_title">Balance History - Guilty Gear Xrd Raven</div>
-								<div class="videos_four_second videos_content videos_desc">A video describing the history of changes and balance patches for the character Raven in Guilty Gear Xrd. I like Raven a lot, but when he was first added to the game he was far too strong for competitive balance.<br><br>This video reached 50,000 views.</div>
+								<div class="videos_four_second videos_content videos_desc">A video describing the history of changes and balance patches for the character Raven in Guilty Gear Xrd. I like Raven a lot, but when he was first added to the game he was far too strong for competitive balance.<br><br>This video reached 175,000 views.</div>
 							</div>
 							
 							<div class="videos_five videos_content"><iframe src="https://www.youtube-nocookie.com/embed/ABaabBA2w2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -88,7 +89,7 @@
 						</div>
 					</div>
 				</div>
-				
+				<!-- Articles -->
 				<div name="list_articles" id="ID-list_articles" style="display: none;">
 					<div name="articles_wrapper" id="ID-articles_wrapper">
 						<div name="articles_grid" id="ID-articles_grid" class="grid_articles">
@@ -100,12 +101,15 @@
 						</div>
 					</div>
 				</div>
-				
+				<!-- Technical Writing -->
 				<div name="list_other" id="ID-list_other" style="display: none;">
 					<div name="other_wrapper" id="ID-other_wrapper">
 						<div name="other_grid" id="ID-other_grid" class="grid_other">
 							<div class="other_one other_content"><a href="../resources/ZoomGuidePublic.pdf">A Simple Guide to Joining a Zoom Meeting</a></div>
 							<div class="other_two other_desc">A guide I wrote for my elderly great aunt to help her join Zoom meetings. Very simple and very plain, but still a good example of technical writing.<p>There were quite a few restrictions for this project due to my aunt's poor grasp of technology, which I realized when I interviewed her to learn exactly what she needed help with.</p><p>She doesn't understand normal words for website navigation, so I couldn't use terms like "submenu" or "interface," which most people would consider common.  We could not change anything within the Zoom application itself on her iPad, since she just doesn't know how to navigte it.</p><p>For instance, there is an option within Zoom to disable video before joining a meeting - exactly what she wants, but I couldn't describe it because she couldn't navigate the Zoom application itself.  Essentially, I had only the most basic words to describe only the most basic actions and use only the most basic menus.  It was a real challenge.</p></div>
+							
+							<div class="other_three other_content"><a href="https://gitgud.io/users/cold_quix/projects">Jackpark.net Repo Documentation</a></div>
+							<div class="other_four other_desc">Each of my Git repos is accompanied by solid documentation, but I believe this website's repo stands out from the rest.  The site has its own repo, and the local files on my PC contain sub-repos for each appropriate module.<p>This structure is easy to use on my PC (everything's right there in one folder), but it can seem wonky to someone who doesn't know the site like I do.  Thus, the Git README section explains how the entire website fits together and how I deploy files to its webserver.</p></div>
 						</div>
 					</div>
 				</div>
